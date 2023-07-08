@@ -1,78 +1,79 @@
-/***** GENERAL STYLING *****/
+/*GENERAL STYLING*/
 
 /* font-family: 'Montserrat', sans-serif; */
 /* Body */
 body {
-    margin: 0%  /* This ensures our site displays all the way to the edge of the browser screen */
+    margin: 0%  /* ensures site displays all the way to the edge of the browser screen */
     background-color: black;
 }
 
 /* Heading 1 elements */
 h1 {
-    text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family: 'Montserrat', sans-serif; /* Sets the font family of all h1 headings */
-    text-align: center; /* Centering all h1 elements */
-    margin-top: 3%; /* Adds a small margin above h1 elements */
+    text-transform: uppercase; /* Capitalize */
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; /* Center all h1 elements */
+    margin-top: 3%; /* Small margin above h1 elements */
     color: #93F5ED; 
     letter-spacing: 3px;
 }
 
 /* Heading 1 element hover effect */
 h1:hover {
-    filter: grayscale(5%); /* Adds a slightly gray filter to the h1 headings when hovered over */
-    transform: scale(1.1); /* When the h1 elements are hovered over they increase in size by 1.1 */
-    transition: transform 1s; /* This causes the transformation to last 1 second */
+    filter: grayscale(5%); /* Adds slightly gray filter when hovered */
+    transform: scale(1.1); /* When hovered over increase in size by 1.1 */
+    transition: transform 1s; /* Transformation to last 1 second */
 }
 
 /* Styling for portfolio title text */
 .white-text {
-    color: #a7ecf6; /* This is used to change the color of the portfolio title text */
+    color: #a7ecf6; 
 }
 
 /* Paragraph elements */
 p {
     font-family: 'Montserrat', sans-serif;
-    text-align: justify; /* Justify text within paragraph elements */
-    letter-spacing: 1px; /* This expands the text slightly */
+    text-align: justify; /* Justify text within p elements */
+    letter-spacing: 1px; 
     font-size: 20px;
-    padding-left: 20px; /* Adds padding to the left of the paragraph element */
-    padding-right: 20px; /* Adds padding to the right of the paragraph element */
+    padding-left: 20px;
+    padding-right: 20px; 
    color: #A6FFB7;
 }
 
 /* Paragraph element hover effect */
 p:hover {
-    transition: transform 1s; /* This makes the transform effect last 1 second */
-	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
+    transition: transform 1s; 
+	transform: scale(1.01); 
 }
 
-/* Center class - this applies to all elements with the class "center" */
+/* Center class -applies to all elements with the class "center" */
 .center {
-    text-align: center; /* This center aligns the text */
+    text-align: center; 
 }
 
 /* Center class hover effect - This only affects the quote, github link, and footer */
 .center:hover {
-    transition: transform 2s; /* This makes the transform effect last 2 seconds */
-    transform: scale(1.1); /* This makes the elements with class "center" increase in size by 1.1 when hovered over */
+    transition: transform 2s; 
+    transform: scale(1.1); 
 }
 
 /* Anchor elements */
 a {
-    color: white; /* This ensures all links are white */
+    color: white; /* All links are white */
+    text-decoration: none; /*No underline*/
 }
 
 /* Quotation elements */
 q {
-    font-style: italic; /* This makes the quote italicized */
+    font-style: italic; 
 }
 
 /* Image elements */
 img {
-    filter: grayscale(25%); /* This rids our pictures of 75% of their color */
-    border-radius: 8px; /* Gives all images slightly rounded corners */
+    filter: grayscale(25%); /* Rids pictures of 75% of color */
+    border-radius: 8px; /* Slightly rounded corners */
     max-width: 100%; /* Ensures all images stay within the width of their container */
-    height: 340px; /* Sets the height of all images */
+    height: 340px; /* Height of all images */
     display: block; /* By specifying block display we can ensure our images are able to be centered */
     margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
     margin-right: auto;
@@ -80,9 +81,9 @@ img {
 
 /* Image element hover effects */
 img:hover {
-	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
-    transition: transform 1s; /* Transition lasts 1 second */
-	transform: scale(1.1); /* Image is increased slightly when hovered over */
+	filter: grayscale(3%);  /* Brings back most of img color when hovered over */
+    transition: transform 1s; 
+	transform: scale(1.1); 
 }
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
@@ -96,7 +97,7 @@ img:hover {
 
 /* Styling for footer element */
 footer {
-    padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
+    padding: 2%; /* Footer padding that is equal to 2% of the width of the element's area */
     background-color: black;
 }
 /***** END OF GENERAL STYLING *****/
@@ -104,9 +105,9 @@ footer {
 /***** NAVBAR STYLING *****/
 .Navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: black; /* This colors the navbar black */
-    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
-    top: 0; /* This ensures no space is displayed above the navbar */
+    background-color: black; /* Colors the navbar black */
+    position: fixed; /* Keeps the navbar at the top of the screen as scrolled*/
+    top: 0; /* No space displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
     z-index: 1; /* This ensures other elements don't display over the navbar */
     -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
@@ -121,13 +122,13 @@ footer {
 
 /* Navbar links */
 .Navbar a {
-    float: left; /* This specifies that the text floats on the left on the navbar */
+    float: left; /* Text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-    color: #91FBD7; /* This is the font color for text on our navbar */
+    color: #91FBD7; /* Text font color on navbar */
     padding: 14px 16px; /* This adds padding around our text */
-    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-    font-family: 'Montserrat', sans-serif; /* This specifies the font family for text on our navbar */
-    font-size: 20px; /* This specifies the font size for text on our navbar */
+    text-decoration: none; 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 20px; 
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
@@ -150,9 +151,9 @@ footer {
 
 /* Navbar hover effects */
 .Navbar a:hover {
-    background-color: #93F5ED; /* Defines the background color that will display when you hover over the link */
-    color: black; /* This defines the font color that will display when navbar a elements are hovered over */
-    font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+    background-color: #93F5ED; 
+    color: black; 
+    font-weight: bold; 
 }
 
 /* Navbar home button */
@@ -165,10 +166,10 @@ footer {
 /* Formatting for background video */
 #Typing_Video {
     position: fixed; /* This fixes the video to the page */
-    right: 0; /* This ensures there is no space between the edge of the video and the edge of the page */
-    bottom: 0; /* This ensures no space between the bottom of the video and the bottom of the page */
-    min-width: 100%; /* This ensures the video is displayed across the full width of the page */
-    z-index: -1; /* This places the video behind the other elements on the page */
+    right: 0; /* No space between the edge of the video and the edge of the page */
+    bottom: 0; /* No space between the bottom of the video and the bottom of the page */
+    min-width: 100%; /* Video is displayed across the full width of the page */
+    z-index: -1; /* Places the video behind the other elements on the page */
 }
 
 /* Screens that are 576px and smaller will not display the background video */
@@ -180,7 +181,7 @@ footer {
 
 /* Texts over the video */
 .Video_Text {
-    background: rgba(0, 0, 0, 0.6); /* This provides a semi-transparent background for the text to sit over */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the text to sit over */
     color: black; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
     padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
@@ -234,9 +235,9 @@ footer {
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
 .Row:after {
-	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
-	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
-	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+	content: ""; /* By leaving this blank, we are allowing the footer to be displayed - removing it makes the footer overwrite a column */
+	display: table; /* Specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+	clear: both; /* Clears any other elements from floating on the left or the right of an element */
 }
 /***** END OF TABLE STYLING *****/
 
@@ -244,12 +245,12 @@ footer {
 /* input[type=text] targets all text input sections of the contact form */
 input[type=text] {
     width: 100%; /* Each input box covers the full width of the container */
-    padding: 12px; /* Adds padding within the text box */
-    border: 1px solid black; /* Setting a solid border and its color */
-    border-radius: 4px; /* Slightly rounds the corners of the text box border */
+    padding: 12px; /* Padding within the text box */
+    border: 1px solid black; 
+    border-radius: 4px; 
     box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
-    margin-top: 6px; /* Adds a margin to the top of the text box */
-    margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
+    margin-top: 6px; 
+    margin-bottom: 16px; 
     resize: vertical; /* This allows the user to resize the text boxes vertically */
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -257,18 +258,18 @@ input[type=text] {
 
 /* Hover effects for input boxes */
 input[type=text]:hover {
-    box-shadow: 0 0 5px black inset; /* This creates a blue shadow in the text box when hovered over by the user */
+    box-shadow: 0 0 5px black inset; /* Shadow in the text box when hovered over by the user */
 }
 
 /* Submit button */
 input[type=submit] {
-    background-color: black; /* Sets the background color of the submit button to black */
-    color:  #3ea39b; /* Sets the font color of the Submit button to white */
-    font-weight: 900; /* Makes the font of the submit button bold */
-    padding: 12px 20px; /* Adds padding to the submit button */
+    background-color: black; /* Background color of the submit button*/
+    color:  #3ea39b; /* Font color of the Submit button*/
+    font-weight: 900; 
+    padding: 12px 20px; 
     border: none; /* Removes the border from the submit button */
     border-radius: 4px; /* Gives the submit button the same rounded corners as the text boxes */
-    cursor: pointer; /* Changes the cursor to pointer when over the submit button */
+    cursor: pointer; /* Cursor is pointer when hovered*/
     display: block; /* Allows the submit button to be centered */
     margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
     margin-right: auto;
@@ -277,17 +278,17 @@ input[type=submit] {
 
 /* Hover effect for submit button */
 input[type=submit]:hover {
-    background-color: black; /* Turns the background of the submit button white when the user hovers over it */
-    color: black; /* Turns the font black when hovered over */
-    transform: scale(1.5); /* Makes the button increase 1.5 times in size */
-    transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds */
+    background-color: black; 
+    color: black; 
+    transform: scale(1.5); 
+    transition: transform 1.5s; 
 }
 
 /* Form element */
 form {
-    border-radius: 5px; /* Rounds the corners of the contact form */
+    border-radius: 5px; 
     background-color:  #3ea39b; 
-    padding: 10px; /* Adds padding to the contact form */
+    padding: 10px; 
     font-family: 'Montserrat', sans-serif;
 }
 /***** END OF CONTACT FORM STYLING *****/
