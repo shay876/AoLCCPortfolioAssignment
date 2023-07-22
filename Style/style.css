@@ -1,10 +1,17 @@
 /*GENERAL STYLING*/
-
+html{ scroll-behavior: smooth;}
 /* font-family: 'Montserrat', sans-serif; */
+
+
+
 /* Body */
 body {
-    margin: 0%  /* ensures site displays all the way to the edge of the browser screen */
+    margin: 0%;  /* ensures site displays all the way to the edge of the browser screen */
     background-color: black;
+    opacity: 1; /*Affects loading fade in effect*/
+    transition: 3s opacity; /*3s fade in*/
+    overflow-x: hidden; /*prevents horizontal scroll bar when quote hovered*/
+    user-select: none; /*text can't be highlighted by user*/
 }
 
 /* Heading 1 elements */
@@ -15,6 +22,11 @@ h1 {
     margin-top: 3%; /* Small margin above h1 elements */
     color: #93F5ED; 
     letter-spacing: 3px;
+}
+
+/* Contributes to the fade effect for the page that occurs when the page is loaded */
+body.fade-out {
+    opacity: .1; /* This sets the level of opacity at the start of page load */
 }
 
 /* Heading 1 element hover effect */
@@ -154,6 +166,8 @@ footer {
     background-color: #93F5ED; 
     color: black; 
     font-weight: bold; 
+    cursor:pointer;
+    transition: 0.5s ease-in;
 }
 
 /* Navbar home button */
@@ -241,6 +255,37 @@ footer {
 }
 /***** END OF TABLE STYLING *****/
 
+
+
+
+/* POPUP BUTTON CONTACT*/
+.Pop_Up_Button {
+    position: fixed; /* The element is positioned relative to the viewport and stays in the same location no matter what */
+    bottom: 1.75vw; /* Positions the button slightly up from the bottom of the viewport */
+    right: 1.75vw; /* Positions the viewport slightly right from the side of the viewport */
+    width: 15vw; /* Sets the width relative to the viewport width */
+    height: 5vh;
+    background-color: #93F5ED; /* Sets the background color of the button*/
+    color: black; /* Sets the color of the button text to black */
+    border: solid black; /* This makes a solid black border around the button */
+    cursor: pointer; /* This changes the cursor when hovered over the button to a pointer */
+    -webkit-animation: movePopup 5s; /* Animation for 5 seconds for Safari 4.0-8.0 */
+    animation: movePopup 5s; /* Animation set for 5 seconds */
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* movePopup animation moves the button from off the right side of the screen to its fixed location on the viewport */
+@keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
 /***** CONTACT FORM STYLING *****/
 /* input[type=text] targets all text input sections of the contact form */
 input[type=text] {
@@ -285,15 +330,23 @@ input[type=submit]:hover {
 }
 
 /* Form element */
-form {
-    border-radius: 5px; 
-    background-color:  #3ea39b; 
-    padding: 10px; 
-    font-family: 'Montserrat', sans-serif;
-    width: 33%;
-    margin-left: 33%;
-    margin-right: 33%;
+
+
+.form-popup {
+    z-index: 8; /* This z-index ensures the contact form shows above all other elements on the page */
+    display: none; /* Set the display to none, we will use JavaScript to show the contact form */
+    position: fixed; /* The form stays in the same location no matter what */
+    bottom: .5vw; /* Slightly up from the bottom of the viewport */
+    right: .5vw; /* Slightly in from the right side of the viewport */
 }
+
+.form-container {
+    max-width: 40vw; /* Relative sizing of the form container - 49% of the viewport width */
+    padding: 1vw; /* Adds padding between the form-popup and the form-container */
+    background-color: #3ea39b; 
+    border-radius: 5px solid black; 
+}
+
 /***** END OF CONTACT FORM STYLING *****/
 
 
@@ -328,6 +381,8 @@ form {
     height: auto; /* The height of the images is automatically adjusted based on the content, ie if your images are different sizes, they will display as different sizes */
     box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75); /* Adds a shadow around the slideshow images */
     width: 100%; /* The width of the images is automatically adjusted based on the content */
+    filter: grayscale(60%);
+
 }
 
 /* Next and previous buttons */
@@ -409,3 +464,98 @@ form {
     to {opacity: 1;} /* Image ends opaque */
 }
 /***** End Slideshow Styling *****/
+
+/***** Media Query Section *****/
+/*Media rules for paragraph font size for different screen sizes*/
+@media screen and (max-width: 527px) {
+    p {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p {
+        font-size: 1.5vw;
+    } 
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p {
+        font-size: 1vw;
+    }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p {
+        font-size: 1vw;
+    }
+}
+
+@media screen and (min-width: 2270px) {
+    p {
+        font-size: 1vw;
+    }
+}
+
+/*Media rule for navbar links for different screen sizes*/
+/* Screens 1080px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 1080px) {
+    .Navbar a{
+        width: 20%; /* This sets each navbar link to 1/5 of the navbar */
+        font-size: 2.5vw;
+    }
+}
+
+/* Media rules to enlarge the font of the white text for smaller screens */
+@media screen and (max-width: 1080px) {
+    .quote{
+        font-size: 3.5vw;
+    }
+
+    .white-text {
+        font-size: 4.5vw;
+    }
+}
+
+/* Media rules to increase the size of the columns for larger screens */
+@media screen and (min-width: 1725px) {
+    .Column_1 {
+        height: 550px;
+    }
+    .Column_2 {
+        height: 550px;
+    }
+}
+
+
+/*Media rule to remove margin-top from h1 elements for extra large screens (so that the paragraph text fits in the column*/
+@media screen and (min-width: 2000px) {
+    h1{
+        margin-top: 0;
+    }
+}
+/***** End of Media Query Section *****/
