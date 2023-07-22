@@ -354,7 +354,7 @@ input[type=submit]:hover {
 /*****NEW SLIDESHOW STYLING*************/
 /***** Slideshow Styling *****/
 #Slideshow_Background {
-    background: rgba(255, 255, 255, 0.35); /* This creates a slightly transparent white background that's palced over the video in the background */    
+    background: rgba(0, 0, 0, 0.6); /* This creates a slightly transparent white background that's palced over the video in the background */    
 }
 
 .mySlides{
